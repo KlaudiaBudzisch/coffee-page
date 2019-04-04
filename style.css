@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --titleMoreMenu: rgb(173, 211, 255);
+    --menuColor: rgb(224, 181, 173);
+    --mainPageColor: linear-gradient(145deg, rgb(255, 222, 207) 20%, rgb(240, 166, 152) 100%);
+    --labelColor: linear-gradient(-180deg, rgba(250, 214, 161, 0.274) 30%, rgb(243, 179, 168) 100%);
+    --hoverColor: rgb(47, 155, 218);
+    --hoverColorActive: rgb(255, 176, 123);
+    --navColor: rgb(216, 168, 150);
+    --activeColor: rgba(155, 185, 219, 0.678);
+    --fontTitle: 'Playball', cursive;
+    --personFont: 'Staatliches', cursive;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.979);
+}
+
+body {
+    background-color: rgba(235, 186, 168, 0.075);
+}
+
+.title {
+    width: 100%;
+    font-size: 70px;
+    font-family: var(--personFont);
+    text-align: center;
+    margin: 10vh 0 15vh 0;
+    color: rgb(177, 138, 124);
+}
+
+/* HEADER LOGO */
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 40vw;
+    background-image: url("main-photos/cover.png");
+    background-size: cover;
+    background-position-y: 70%;
+    background-attachment: fixed;
+}
+
+.logo {
+    position: absolute;
+    top: calc(50% - 8vw/2);
+    width: 100%;
+    height: 8vw;
+    background-image: url("main-photos/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* NAVIGATION MENU */
+
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: var(--navColor);
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    transition: .4s linear;
+}
+
+.fixed-nav nav {
+    position: fixed;
+    background-color: var(--activeColor);
+    top: 0;
+}
+
+button.btn {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 40px;
+    border-style: none;
+    outline: none;
+    border: 0;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+button.btn:hover {
+    color: rgb(184, 89, 66);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    display: flex;
+    min-height: 30vh;
+    margin-top: 10vh;
+    justify-content: center;
+}
+
+.box {
+    flex-basis: 40%;
+}
+
+.content-text {
+    padding: 2%;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 27px;
+    background-image: var(--mainPageColor);
+}
+
+.content-text p:first-child {
+    font-size: 50px;
+    font-family: var(--fontTitle);
+    line-height: 30px;
+}
+
+.content-photo {
+    background-image: url("main-photos/about.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ABOUT STYLE */
+
+article.quote,
+article.label-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quote {
+    margin-left: 5%;
+    margin-bottom: 100px;
+    width: 95%;
+    height: 60vh;
+}
+
+.collage {
+    height: 100%;
+    min-width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("about-photos/collage1.png")
+}
+
+.text {
+    height: 100%;
+    width: 50%;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: url("about-photos/quote.png")
+}
+
+span.title-about {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5% 0;
+    font-size: 65px;
+    font-family: var(--personFont);
+}
+
+.label {
+    flex-basis: 335px;
+    min-height: 50vh;
+    margin: 1%;
+    padding-top: 20px;
+    text-align: center;
+    background-image: var(--labelColor);
+}
+
+.col {
+    width: 60%;
+    height: 0;
+    padding-bottom: 60%;
+    margin-left: 20%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person-info {
+    margin: 3% 10%;
+    width: 80%;
+    padding: 0 5%;
+}
+
+.person-info p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.person-info h1 {
+    font-size: 45px;
+    font-family: var(--fontTitle);
+    font-weight: 500;
+}
+
+.person-info h3 {
+    font-size: 20px;
+    font-family: var(--personFont);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgb(161, 188, 226);
+}
+
+.col1 {
+    background-image: url("about-photos/person0.png");
+    background-size: 120%;
+}
+
+.col2 {
+    background-image: url("about-photos/person4.png");
+    background-size: 130%;
+    background-position-y: top;
+}
+
+.col3 {
+    background-image: url("about-photos/person2.png");
+}
+
+
+/* COFFEE MENU STYLE */
+
+.coffee-box {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.coffee-photo {
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.p1 {
+    background-image: url("coffee-photos/1.png");
+}
+
+.p2 {
+    background-image: url("coffee-photos/2.png");
+    background-position: bottom;
+}
+
+.p3 {
+    background-image: url("coffee-photos/3.png");
+}
+
+.menu-text {
+    flex-basis: 40%;
+}
+
+.coffee-menu .menu-text {
+    background-color: var(--menuColor);
+}
+
+.menu-text h4 {
+    font-size: 21px;
+    font-weight: 400;
+    font-family: var(--personFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-text p:last-child {
+    margin-bottom: 0px;
+}
+
+.menu-text p {
+    font-size: 14px;
+    margin: 0 10% 25px 10%;
+}
+
+.menu-text b {
+    font-size: 13px;
+}
+
+.more-menu .menu-text h4 {
+    color: #ffa98c;
+    font-size: 23px;
+}
+
+
+.more-menu .menu-text p {
+    color: rgb(167, 132, 119);
+}
+
+
+
+/* MORE MENU */
+
+
+.more-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon-and-title {
+    position: relative;
+    height: 200px;
+    padding-top: 5px;
+    font-size: 38px;
+    font-weight: 400;
+    font-family: var(--personFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--titleMoreMenu);
+}
+
+.icon-and-title::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    bottom: 15px;
+    width: 40%;
+    height: 2px;
+    background-color: var(--titleMoreMenu);
+}
+
+.icons {
+    margin-top: 40px;
+    height: 80px;
+}
+
+.ice {
+    transform: rotate(20deg) scale(1.2);
+}
+
+.drinks {
+    transform: scale(1.2);
+}
+
+.list {
+    padding: 2% 35%;
+    margin-bottom: 20px;
+}
+
+/* CONTACT STYLE */
+
+
+.contact-page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.photo {
+    background-image: url("main-photos/contact-info.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-box {
+    width: 530px;
+    height: 350px;
+}
+
+.contact-title {
+    font-size: 40px;
+    font-family: var(--personFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-title:nth-child(1) {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(128, 151, 177, 0.678);
+    font-size: 12px;
+    z-index: 1;
+}
+
+footer a {
+    display: block;
+    float: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0 20px;
+    transition: 0.6s linear;
+}
+
+footer a:hover {
+    color: black;
+}

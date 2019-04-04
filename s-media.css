@@ -1,0 +1,133 @@
+@media (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+(min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+    .title {
+        margin: 5vh 0 5vh 0;
+    }
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex-basis: 80%;
+        height: 350px;
+    }
+
+    .content-text {
+        order: 2;
+    }
+
+    .content-photo {
+        height: 250px;
+    }
+
+    .quote {
+        height: 40vh;
+        margin-bottom: 20px;
+    }
+
+    .col {
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        margin-left: 25%;
+
+    }
+
+    .label {
+        flex-basis: 50%;
+        height: 400px;
+        margin: 20px;
+    }
+
+    .person-info {
+        margin: 3% 10%;
+        width: 80%;
+        padding: 0;
+    }
+
+    .coffee-box {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .icon-and-title {
+        margin-bottom: 30px;
+    }
+
+    .icon-and-title::after {
+        bottom: -15px;
+        height: 3px;
+    }
+
+    .icons {
+        height: 100px;
+    }
+
+    .list {
+        padding: 2% 20%;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+    .title {
+        margin: 10vh 0 10vh 0;
+    }
+
+    .box {
+        flex-basis: 70%;
+        height: 350px;
+    }
+
+    .quote {
+        height: 60vh;
+        margin-bottom: 60px;
+    }
+
+    .label {
+        flex-basis: 35%;
+        height: 500px;
+        margin: 20px;
+    }
+}
+
+@media (max-width : 360px) and (orientation : portrait) {
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex-basis: 100%;
+        padding: 30px;
+    }
+
+    .content-text {
+        order: 2;
+    }
+
+    .content-photo {
+        height: 50vh;
+    }
+
+
+    article.quote {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .label {
+        margin-bottom: 50px;
+    }
+
+    .coffee-photo {
+        display: none;
+    }
+
+    .menu-text {
+        flex-basis: 100%;
+        padding: 40px 0;
+    }
+
+}
